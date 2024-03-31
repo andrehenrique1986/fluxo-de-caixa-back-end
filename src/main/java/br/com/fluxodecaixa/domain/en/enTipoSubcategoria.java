@@ -20,7 +20,7 @@ public enum enTipoSubcategoria {
 	@Order(14) SUPERMERCADO("Supermercado", 14),
 	@Order(15) PIZZARIA("Pizzaria", 15),
 	@Order(16) JANTAR_FORA("Jantar Fora", 16),
-	@Order(17) LANCHES("Jantar Fora", 17),
+	@Order(17) LANCHES("Lanches", 17),
 	@Order(18) CONSULTAS("Consultas", 18),
 	@Order(19) EXAMES("Exames", 19),
 	@Order(20) PLANO_DE_SAUDE("Plano de Saúde", 20),
@@ -52,6 +52,11 @@ public enum enTipoSubcategoria {
 
 	public int getNumero() {
 		return numero;
+	}
+
+	public enTipoCategoria getTipoCategoria() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

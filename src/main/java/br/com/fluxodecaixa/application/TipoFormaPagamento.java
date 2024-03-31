@@ -6,6 +6,8 @@ import br.com.fluxodecaixa.domain.en.enTipoFormaPagamento;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -21,6 +23,7 @@ public class TipoFormaPagamento {
 	private Long idFormaPagamento;
 	
 	@Column(name = "dscFormaPagamento")
+	@Enumerated(EnumType.STRING)
 	private enTipoFormaPagamento dscFormaPagamento;
 	
 	@OneToMany(mappedBy = "formaPagamento", cascade = CascadeType.ALL)

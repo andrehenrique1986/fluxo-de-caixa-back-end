@@ -6,6 +6,8 @@ import br.com.fluxodecaixa.domain.en.enTipoCusto;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -21,6 +23,7 @@ public class TipoCusto {
 	private Long idTipoCusto;
 	
 	@Column(name = "dscTipoCusto")
+	@Enumerated(EnumType.STRING)
 	private enTipoCusto dscTipoCusto;
 	
 	@OneToMany(mappedBy = "tipoCusto", cascade = CascadeType.ALL)

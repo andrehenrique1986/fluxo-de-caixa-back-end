@@ -6,6 +6,8 @@ import br.com.fluxodecaixa.domain.en.enTipoSubcategoria;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -23,6 +25,7 @@ public class Subcategoria {
 	private Long idSubcategoria;
 	
 	@Column(name = "dscSubcategoria")
+	@Enumerated(EnumType.STRING)
 	private enTipoSubcategoria dscSubcategoria;
 	
 	@ManyToOne
